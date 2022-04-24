@@ -2,6 +2,8 @@ const projectsData = [
     {
         id: '1',
         imgSrc: '/projects/mockify-imac.png',
+        imgWidth: '240',
+        imgHeight: '202',
         imgAlt: 'Mockify',
         websiteLink: 'https://mockify-tawny.vercel.app/',
         githubLink: 'https://github.com/M4veryck/mockify',
@@ -20,7 +22,9 @@ const projectsData = [
     },
     {
         id: '2',
-        imgSrc: '/projects/airbnb-clone-phone.svg',
+        imgSrc: '/projects/airbnb-clone-phone.png',
+        imgWidth: '97',
+        imgHeight: '202',
         imgAlt: 'Airbnb clone',
         websiteLink: 'https://airbnb-clone-tawny.vercel.app/',
         githubLink: 'https://github.com/M4veryck/airbnb-clone',

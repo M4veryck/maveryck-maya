@@ -204,7 +204,7 @@
             transform: translateY(-50%);
 
             background: $clr-accent;
-            animation: typewrite $typingSpeed steps(var(--adsText1Length))
+            animation: typewriteBar1 $typingSpeed steps(var(--adsText1Length))
                     $initialDelay forwards,
                 hideAfter 1ms ($initialDelay + $typingSpeed) forwards;
         }
@@ -240,7 +240,7 @@
 
             background: $clr-accent;
             animation: showAfter 1ms ($initialDelay + $typingSpeed) forwards,
-                typewrite $typingSpeed steps(var(--adsText1Length))
+                typewriteBar2 $typingSpeed steps(var(--adsText1Length))
                     ($initialDelay + $typingSpeed) forwards,
                 hideAfter 1ms ($initialDelay + 2 * $typingSpeed) forwards;
         }
@@ -276,7 +276,7 @@
 
             background: $clr-accent;
             animation: showAfter 1ms ($initialDelay + 2 * $typingSpeed) forwards,
-                typewrite $typingSpeed steps(var(--adsText1Length))
+                typewriteBar3 $typingSpeed steps(var(--adsText1Length))
                     ($initialDelay + 2 * $typingSpeed) forwards,
                 blink 1.1s steps(2, start) ($initialDelay + 3 * $typingSpeed)
                     infinite;
@@ -286,7 +286,25 @@
 
 @keyframes typewrite {
     to {
-        left: 101%;
+        transform: translateX(101%);
+    }
+}
+
+@keyframes typewriteBar1 {
+    to {
+        transform: translate(calc(87% * var(--adsText1Length)), -50%);
+    }
+}
+
+@keyframes typewriteBar2 {
+    to {
+        transform: translate(calc(87% * var(--adsText2Length)), -50%);
+    }
+}
+
+@keyframes typewriteBar3 {
+    to {
+        transform: translate(calc(87% * var(--adsText3Length)), -50%);
     }
 }
 

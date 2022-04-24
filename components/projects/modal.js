@@ -4,7 +4,10 @@ import Link from 'next/link'
 import styles from '../../styles/Projects/Modal.module.scss'
 
 export default function Modal({
+    id,
     imgSrc,
+    imgWidth,
+    imgHeight,
     imgAlt,
     projectTitle,
     websiteLink,
@@ -21,11 +24,11 @@ export default function Modal({
             <div
                 className={styles['modal-background']}
                 onClick={closeModal}
-                id="modal-background"
+                id={`modal-background${id}`}
             ></div>
             <div
                 className={`${styles['project--article']} ${styles['project--modal']}`}
-                id="project--modal"
+                id={`project--modal${id}`}
             >
                 <div
                     className={`${styles['image--container']} ${styles['image--container--modal']}`}
@@ -33,8 +36,8 @@ export default function Modal({
                     <Image
                         src={imgSrc}
                         alt={imgAlt}
-                        width={330}
-                        height={278}
+                        width={Number(imgWidth)}
+                        height={Number(imgHeight)}
                         className={styles['project-image']}
                     />
                 </div>

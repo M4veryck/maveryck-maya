@@ -4,6 +4,7 @@ import '../styles/globals.scss'
 import { NavBarContextProvider } from '../components/navBarContext'
 
 function MyApp({ Component, pageProps }) {
+    // Thanks to https://dev.to/josedonato/adding-a-service-worker-into-your-next-js-application-1dib
     useEffect(() => {
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/serviceWorker.js').then(

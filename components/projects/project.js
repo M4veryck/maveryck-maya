@@ -9,14 +9,22 @@ import { NavBarContextConsumer } from '../navBarContext'
 import useSlideFirstTime from '../hooks/useSlideFirstTime'
 
 export default function Project(props) {
-    const { id, imgSrc, imgAlt, projectTitle, projectDesc } = props
+    const {
+        id,
+        imgSrc,
+        imgWidth,
+        imgHeight,
+        imgAlt,
+        projectTitle,
+        projectDesc,
+    } = props
     const modalRef = useRef()
     const [displayModal, setDisplayModal] = useState(false)
 
     function stylesModalDisplayed() {
         modalRef.current.style.display = 'block'
-        document.getElementById('modal-background').style.display = 'block'
-        document.getElementById('project--modal').style.display = 'grid'
+        document.getElementById(`modal-background${id}`).style.display = 'block'
+        document.getElementById(`project--modal${id}`).style.display = 'grid'
         document.body.style.overflowY = 'hidden'
         document.documentElement.style.overflowY = 'hidden'
         document.getElementById('projects').style.zIndex = 9
@@ -24,8 +32,8 @@ export default function Project(props) {
 
     function stylesModalHidden() {
         modalRef.current.style.display = 'none'
-        document.getElementById('modal-background').style.display = 'none'
-        document.getElementById('project--modal').style.display = 'none'
+        document.getElementById(`modal-background${id}`).style.display = 'none'
+        document.getElementById(`project--modal${id}`).style.display = 'none'
         document.body.style.overflowY = 'initial'
         document.documentElement.style.overflowY = 'initial'
         document.getElementById('projects').style.zIndex = 2
@@ -53,7 +61,11 @@ export default function Project(props) {
 
     return (
         <>
-            <div className={styles['modal--container']} ref={modalRef}>
+            <div
+                className={styles['modal--container']}
+                ref={modalRef}
+                id={`modal--container${id}`}
+            >
                 <Modal {...props} closeModal={closeModal} />
             </div>
 
@@ -66,8 +78,8 @@ export default function Project(props) {
                     <Image
                         src={imgSrc}
                         alt={imgAlt}
-                        width={240}
-                        height={202}
+                        width={Number(imgWidth)}
+                        height={Number(imgHeight)}
                         className={styles['project-image']}
                     />
                 </div>

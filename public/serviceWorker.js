@@ -1,3 +1,4 @@
+// Thanks to https://stackoverflow.com/questions/46541071/progressive-web-app-does-not-work-offline-error
 self.addEventListener('fetch', function (event) {
     event.respondWith(
         (async function () {

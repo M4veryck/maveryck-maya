@@ -4,8 +4,8 @@ import Image from 'next/image'
 import styles from '../styles/Index.module.scss'
 import Layout from '../components/layout/layout'
 import Hero from '../components/hero'
-import AboutMe from './#about'
-import Projects from './#projects'
+import AboutMe from '../components/about'
+import Projects from '../components/projects'
 
 export default function Home() {
     return (

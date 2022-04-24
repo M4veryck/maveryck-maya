@@ -2,11 +2,11 @@
 import { useRef } from 'react'
 import { motion } from 'framer-motion'
 
-import styles from '../styles/Projects/Projects.module.scss'
-import Project from '../components/projects/project'
-import { projectsData } from '../components/projects/projectsData'
-import useCurrentSection from '../components/hooks/useCurrentSection'
-import useSlideFirstTime from '../components/hooks/useSlideFirstTime'
+import styles from '../../styles/Projects/Projects.module.scss'
+import Project from './project'
+import { projectsData } from './projectsData'
+import useCurrentSection from '../hooks/useCurrentSection'
+import useSlideFirstTime from '../hooks/useSlideFirstTime'
 
 export default function Projects() {
     const projectsRef = useRef()

@@ -3,9 +3,9 @@ import { useRef } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
-import styles from '../styles/AboutMe/AboutMe.module.scss'
-import useCurrentSection from '../components/hooks/useCurrentSection'
-import useSlideFirstTime from '../components/hooks/useSlideFirstTime'
+import styles from '../../styles/AboutMe/AboutMe.module.scss'
+import useCurrentSection from '../hooks/useCurrentSection'
+import useSlideFirstTime from '../hooks/useSlideFirstTime'
 
 export default function AboutMe() {
     const aboutRef = useRef()

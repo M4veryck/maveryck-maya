@@ -21,9 +21,11 @@ export default function Modal({
             <div
                 className={styles['modal-background']}
                 onClick={closeModal}
+                id="modal-background"
             ></div>
             <div
                 className={`${styles['project--article']} ${styles['project--modal']}`}
+                id="project--modal"
             >
                 <div
                     className={`${styles['image--container']} ${styles['image--container--modal']}`}

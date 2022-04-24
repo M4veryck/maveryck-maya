@@ -11,34 +11,37 @@ import useSlideFirstTime from '../hooks/useSlideFirstTime'
 export default function Project(props) {
     const { id, imgSrc, imgAlt, projectTitle, projectDesc } = props
     const modalRef = useRef()
-    const { windowBigEnough } = NavBarContextConsumer()
     const [displayModal, setDisplayModal] = useState(false)
 
-    // function stylesModalDisplayed() {
-    //     modalRef.current.style.display = 'block'
-    //     document.body.style.overflowY = 'hidden'
-    //     document.documentElement.style.overflowY = 'hidden'
-    //     document.getElementById('projects').style.zIndex = 9
-    // }
+    function stylesModalDisplayed() {
+        modalRef.current.style.display = 'block'
+        document.getElementById('modal-background').style.display = 'block'
+        document.getElementById('project--modal').style.display = 'grid'
+        document.body.style.overflowY = 'hidden'
+        document.documentElement.style.overflowY = 'hidden'
+        document.getElementById('projects').style.zIndex = 9
+    }
 
-    // function stylesModalHidden() {
-    //     modalRef.current.style.display = 'none'
-    //     document.body.style.overflowY = 'initial'
-    //     document.documentElement.style.overflowY = 'initial'
-    //     document.getElementById('projects').style.zIndex = 2
-    // }
+    function stylesModalHidden() {
+        modalRef.current.style.display = 'none'
+        document.getElementById('modal-background').style.display = 'none'
+        document.getElementById('project--modal').style.display = 'none'
+        document.body.style.overflowY = 'initial'
+        document.documentElement.style.overflowY = 'initial'
+        document.getElementById('projects').style.zIndex = 2
+    }
 
-    // function closeModal() {
-    //     setDisplayModal(false)
-    // }
+    function closeModal() {
+        setDisplayModal(false)
+    }
 
-    // useEffect(() => {
-    //     if (displayModal) {
-    //         stylesModalDisplayed()
-    //         return
-    //     }
-    //     stylesModalHidden()
-    // }, [displayModal])
+    useEffect(() => {
+        if (displayModal) {
+            stylesModalDisplayed()
+            return
+        }
+        stylesModalHidden()
+    }, [displayModal])
 
     const projectRef = useRef()
     const projectAnimation = useSlideFirstTime(projectRef, {
@@ -50,9 +53,9 @@ export default function Project(props) {
 
     return (
         <>
-            {/* <div className={styles['modal--container']} ref={modalRef}>
+            <div className={styles['modal--container']} ref={modalRef}>
                 <Modal {...props} closeModal={closeModal} />
-            </div> */}
+            </div>
 
             <motion.article
                 className={styles['project--article']}

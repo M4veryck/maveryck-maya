@@ -1,0 +1,90 @@
+$primary-font: 'Raleway';
+$light: 300;
+$bold: 500;
+
+$clr-light: #f3f3f3;
+$clr-soft-light: #ececec;
+$clr-dark: #000000;
+$clr-soft-dark: #111016;
+$clr-accent: #1cb4e2;
+// $clr-accent2: #1cb4e2;
+$clr-accent2: #005b60;
+// $clr-accent2: #f7f7f7;
+
+$fs-h1: 3rem;
+$fs-h2: 2.2rem;
+$fs-h3: 2rem;
+$fs-h4: 1.2rem;
+$fs-rol: 1.4rem;
+$fs-p: 1.2rem;
+$fs-navLink: 1.6rem;
+
+$box-shadow-strong: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+@mixin font-stack($font) {
+    font-family: $font, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+        Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+@mixin background-image($bg-color, $bg-image) {
+    background-color: $bg-color;
+    background-image: $bg-image;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin section--title() {
+    width: 90%;
+
+    margin-inline: auto;
+    margin-block: 1.5em;
+
+    color: $clr-soft-light;
+    font-size: $fs-h2;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+@mixin h2-styles($color) {
+    @include font-stack('Raleway');
+    width: fit-content;
+
+    border-bottom: 5px solid $color;
+    margin-inline: auto;
+
+    text-align: center;
+    font-weight: 700;
+    color: $color;
+    font-size: $fs-h2;
+    // text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@mixin h3-styles($color) {
+    @include font-stack('Raleway');
+    width: fit-content;
+
+    border-bottom: 5px solid $color;
+    margin-inline: auto;
+
+    text-align: center;
+    font-weight: 600;
+    color: $color;
+    font-size: $fs-h3;
+    // text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@mixin h4-styles($color) {
+    width: fit-content;
+
+    border-bottom: 2px solid $color;
+    margin-inline: auto;
+
+    text-align: center;
+    font-weight: 500;
+    color: $color;
+    font-size: $fs-h4;
+}

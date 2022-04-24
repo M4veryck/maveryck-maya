@@ -1,0 +1,18 @@
+@import './vars.scss';
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    @include font-stack('Raleway');
+    max-width: 100vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+strong {
+    font-weight: $bold;
+    letter-spacing: 1px;
+}

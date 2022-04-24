@@ -1,0 +1,121 @@
+@import '../vars.scss';
+
+.footer {
+    display: grid;
+    position: relative;
+    justify-items: center;
+    background-color: $clr-dark;
+    z-index: 8;
+
+    .footerContainer {
+        width: 90%;
+        margin-block: 3.5em;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 300px);
+        justify-content: space-between;
+        row-gap: 3.5em;
+        column-gap: 2em;
+
+        * {
+            width: 280px;
+        }
+
+        .linkText,
+        .attributionsLink {
+            &:hover,
+            &:focus {
+                color: $clr-accent;
+            }
+        }
+
+        .footerLink {
+            &:hover,
+            &:focus {
+                color: $clr-accent;
+            }
+        }
+
+        .col1 {
+            .personalLinksTitle {
+                margin-top: 0;
+            }
+
+            .linkText {
+                width: max-content;
+            }
+            .linkContainer {
+                height: fit-content;
+
+                .footerLink {
+                    width: fit-content;
+                    height: fit-content;
+
+                    display: grid;
+                    grid-template-columns: 30px auto;
+                    column-gap: 0.5em;
+                    align-items: center;
+
+                    text-decoration: none;
+
+                    .linkText {
+                        margin-block: 1em;
+                    }
+                }
+
+                &:first-of-type {
+                    .footerLink {
+                        align-items: flex-start;
+                        .linkText {
+                            margin-top: 0.1em;
+                        }
+                    }
+                }
+            }
+        }
+
+        .col2 {
+            .pageInfoIntro {
+                margin: 0;
+                margin-bottom: 1em;
+                text-align: center;
+            }
+
+            .techsContainerOne,
+            .techsContainerTwo {
+                height: fit-content;
+
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .col3 {
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+
+            * {
+                height: fit-content;
+            }
+
+            .attributionsTitle {
+                margin-top: 0;
+                margin-bottom: 0.1em;
+            }
+            .attributionsLink {
+                margin-top: 0;
+                margin-bottom: 1em;
+
+                &:hover,
+                &:focus {
+                    color: $clr-accent;
+                }
+            }
+        }
+
+        * {
+            color: $clr-light;
+        }
+    }
+}

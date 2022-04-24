@@ -1,0 +1,252 @@
+@import '../vars.scss';
+@import './Projects.module.scss';
+
+.modal--container {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+}
+
+.modal-background {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background-color: rgba(0, 0, 0, 0.95);
+}
+
+.project--modal {
+    width: 95%;
+    max-width: 380px;
+    max-height: 90%;
+    display: grid;
+    grid-template-rows: 10% repeat(2, 25%) 40%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+
+    background-color: $clr-soft-dark;
+    padding-bottom: 1em;
+    margin-inline: auto;
+    margin-block: 0;
+    border-radius: 5px;
+}
+
+.close-btn {
+    width: 40px;
+    grid-row: 1 / 2;
+    justify-self: right;
+    align-self: center;
+    position: absolute;
+    cursor: pointer;
+
+    background: none;
+    border: none;
+    border-radius: 50px;
+}
+
+.image--container--modal {
+    width: 30%;
+    max-width: 200px;
+    grid-row: 2 / 3;
+}
+
+.text--container--modal {
+    overflow-y: scroll;
+    grid-row: 4 / 5;
+
+    padding: 1em;
+}
+
+.project-title--modal {
+    @include font-stack('Raleway');
+    margin-top: 0;
+    margin-bottom: 0.5em;
+
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.05em;
+}
+
+.project-bugs--title,
+.project-techs--title,
+.project-diffs--title,
+.project-features--title {
+    @include font-stack('Raleway');
+
+    margin-bottom: 0.25em;
+
+    font-size: 1.2rem;
+}
+
+.project-bugs--title {
+    color: red;
+}
+
+.project-desc--modal,
+.project-bugs--desc,
+.project-techs--desc,
+.project-diffs--desc,
+.project-features--desc {
+    margin-top: 0;
+    margin-bottom: 1em;
+
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.links--container--modal {
+    grid-row: 3 / 4;
+}
+
+.website-link {
+    @include link();
+    align-self: center;
+    height: fit-content;
+
+    background-color: $clr-soft-light;
+
+    color: $clr-dark;
+    font-size: 0.8rem;
+
+    &:hover,
+    &:focus-visible {
+        background-color: rgb(136, 136, 136);
+        box-shadow: $box-shadow-strong;
+    }
+}
+
+.github-link {
+    @include link();
+    display: grid;
+    grid-template-columns: 27px auto;
+    align-items: center;
+    height: fit-content;
+
+    background-color: $clr-dark;
+    padding-inline: 1em;
+
+    color: $clr-light;
+    font-size: 0.8rem;
+
+    &:hover,
+    &:focus-visible {
+        background-color: rgb(63, 63, 63);
+        box-shadow: $box-shadow-strong;
+    }
+}
+
+.github-link-icon {
+    width: 20px;
+    height: 20px;
+    justify-self: right;
+
+    * {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.github-link-text {
+    height: 27px;
+    width: fit-content;
+    margin-left: 0.5em;
+
+    line-height: 1.6;
+}
+
+@media (min-width: 440px) and (min-height: 480px) {
+    .project-title--modal {
+        font-size: 1.8rem;
+    }
+
+    .project-bugs--title,
+    .project-techs--title,
+    .project-diffs--title,
+    .project-features--title {
+        font-size: 1.4rem;
+    }
+
+    .project-desc--modal,
+    .project-bugs--desc,
+    .project-techs--desc,
+    .project-diffs--desc,
+    .project-features--desc {
+        margin-top: 0;
+        margin-bottom: 1em;
+
+        font-size: $fs-p + 0.1;
+        line-height: 1.4;
+    }
+}
+
+@media (min-width: 820px) {
+    .project--modal {
+        height: 70vh;
+        min-height: unset;
+        max-height: 420px;
+        max-width: 950px;
+        grid-template-rows: 50px auto auto;
+        grid-template-columns: 40% 60%;
+
+        background-color: $clr-soft-light;
+        padding-bottom: 2em;
+        padding-top: 0;
+    }
+
+    .close-btn {
+        width: fit-content;
+        grid-column: 2 / 3;
+    }
+
+    .image--container--modal {
+        width: 60%;
+        max-width: 300px;
+        height: fit-content;
+        grid-row: 2 / 3;
+    }
+
+    .website-link {
+        background-color: $clr-accent2;
+
+        color: $clr-light;
+        font-size: 1.1rem;
+
+        &:hover,
+        &:focus-visible {
+            box-shadow: none;
+        }
+    }
+
+    .github-link {
+        font-size: 1.1rem;
+
+        &:hover,
+        &:focus-visible {
+            box-shadow: none;
+        }
+    }
+
+    .text--container--modal {
+        height: 100%;
+        grid-row: 2 / span 2;
+        align-self: stretch;
+
+        padding-block: 0;
+    }
+
+    .project-features--desc {
+        margin-bottom: 2em;
+    }
+}

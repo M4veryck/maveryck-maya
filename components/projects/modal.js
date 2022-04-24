@@ -53,12 +53,20 @@ export default function Modal({
                     className={`${styles['links--container']} ${styles['links--container--modal']}`}
                 >
                     <Link href={websiteLink}>
-                        <a target="_blank" className={styles['website-link']}>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles['website-link']}
+                        >
                             Project website
                         </a>
                     </Link>
                     <Link href={githubLink}>
-                        <a target="_blank" className={styles['github-link']}>
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles['github-link']}
+                        >
                             <div className={styles['github-link-icon']}>
                                 <Image
                                     src="/icons/github-bw-icon.svg"

@@ -61,7 +61,12 @@ export default function AboutMe() {
                             <p className={styles['description']}>
                                 At{' '}
                                 <Link href="https://scrimba.com">
-                                    <a target="_blank">Scrimba</a>
+                                    <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        Scrimba
+                                    </a>
                                 </Link>
                                 , I learned the fundamentals of{' '}
                                 <strong>Responsive Design, UI, and UX</strong>,

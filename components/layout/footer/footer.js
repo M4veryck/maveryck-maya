@@ -69,13 +69,21 @@ export default function Footer() {
                         Background from:
                     </h4>
                     <Link href="https://www.freepik.com/vectors/background">
-                        <a className={styles.attributionsLink} target="_blank">
+                        <a
+                            className={styles.attributionsLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Freepik
                         </a>
                     </Link>
                     <h4 className={styles.attributionsTitle}>Icons from:</h4>
                     <Link href="https://icons8.com">
-                        <a className={styles.attributionsLink} target="_blank">
+                        <a
+                            className={styles.attributionsLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Icons8
                         </a>
                     </Link>

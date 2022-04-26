@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useRef, useEffect } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 
 import styles from '../../styles/Hero/Hero.module.scss'
@@ -25,6 +26,36 @@ export default function Hero() {
 
     return (
         <section className={styles['hero--section']} id="main" ref={heroRef}>
+            <div className={styles['socials--container']}>
+                <Link href="https://linkedin.com/in/maveryck-maya">
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles['socials-icons']}
+                    >
+                        <Image
+                            src="/icons/demo-linkedin-icon2.svg"
+                            alt="Maveryck's maya Linkedin profile"
+                            width={45}
+                            height={45}
+                        />
+                    </a>
+                </Link>
+                <Link href="https://github.com/M4veryck">
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles['socials-icons']}
+                    >
+                        <Image
+                            src="/icons/demo-github-icon.svg"
+                            alt="Maveryck's maya GitHub profile"
+                            width={45}
+                            height={45}
+                        />
+                    </a>
+                </Link>
+            </div>
             <div className={styles['hero--container']}>
                 <div className={styles['image--container']}>
                     <Image

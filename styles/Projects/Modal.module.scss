@@ -134,7 +134,7 @@
     align-self: center;
     height: fit-content;
 
-    background-color: $clr-soft-light;
+    background-color: $clr-accent;
 
     color: $clr-dark;
     font-size: 0.8rem;
@@ -154,10 +154,10 @@
     height: fit-content;
     position: relative;
 
-    background-color: $clr-dark;
+    background-color: $clr-soft-light;
     padding-inline: 1em;
 
-    color: $clr-light;
+    color: $clr-dark;
     font-size: 0.8rem;
 
     &:hover,
@@ -262,6 +262,9 @@
     }
 
     .github-link {
+        background-color: $clr-dark;
+
+        color: $clr-light;
         font-size: 1.1rem;
 
         &:hover,

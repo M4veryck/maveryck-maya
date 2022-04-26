@@ -131,10 +131,26 @@
 
         text-align: center;
         color: $clr-dark;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 0.8rem;
     }
 
+    // @for $i from 1 through 3 {
+    //     li:nth-child(#{$i}) {
+    //         background-color: darken($clr-light, $i * 5%);
+    //     }
+    // }
+}
+
+// .frontend-skills {
+//     @for $i from 1 through 5 {
+//         li:nth-child(#{$i}) {
+//             background-color: darken($clr-light, $i * 3%);
+//         }
+//     }
+// }
+
+.backend-skills {
     @for $i from 1 through 3 {
         li:nth-child(#{$i}) {
             background-color: darken($clr-light, $i * 5%);
@@ -142,10 +158,21 @@
     }
 }
 
+.others-skills {
+    @for $i from 1 through 3 {
+        li:nth-child(#{$i}) {
+            background-color: darken(#03e6f7, $i * 5%);
+        }
+    }
+}
+
 .frontend-skills {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+
     @for $i from 1 through 5 {
         li:nth-child(#{$i}) {
-            background-color: darken($clr-light, $i * 3%);
+            background-color: darken(#ff3cff, $i * 3%);
         }
     }
 }
@@ -220,12 +247,9 @@
     }
 
     .overlap-div {
-        position: relative;
-    }
-
-    .overlap-div {
         width: 100%;
         height: fit-content;
+        position: relative;
         grid-column: 3 / 4;
         justify-self: end;
         z-index: 2;
@@ -234,10 +258,12 @@
             $clr-soft-dark,
             url('/backgrounds/dark-background.svg')
         );
-        box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-            rgba(0, 0, 0, 0.22) 0px 15px 12px;
-        padding: 2em 2em;
-        border-radius: 3px;
+        // box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        //     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+        // box-shadow: rgba(255, 255, 255, 0.25) 0px 1px 4px;
+        padding: 1.5em 2em 2em;
+        border-radius: 7px;
+        box-shadow: $box-shadow-black;
     }
 
     .who-i-am--col {
@@ -295,9 +321,11 @@
         justify-self: right;
 
         background-color: $clr-soft-light;
-        box-shadow: $box-shadow-strong;
+        // box-shadow: $box-shadow-black;
+        border-radius: 7px;
         padding: 2em 1em;
         margin-top: 2.5em;
+        box-shadow: $box-shadow-black2;
     }
 
     .just-skills,
@@ -324,10 +352,20 @@
 
             color: $clr-soft-light;
         }
+    }
 
+    .backend-skills {
         @for $i from 1 through 3 {
             li:nth-child(#{$i}) {
-                background-color: lighten($clr-soft-dark, $i * 5%);
+                background-color: lighten($clr-dark, $i * 5%);
+            }
+        }
+    }
+
+    .others-skills {
+        @for $i from 1 through 3 {
+            li:nth-child(#{$i}) {
+                background-color: lighten(#002022, $i * 5%);
             }
         }
     }
@@ -338,7 +376,7 @@
 
         @for $i from 1 through 5 {
             li:nth-child(#{$i}) {
-                background-color: lighten($clr-soft-dark, $i * 3%);
+                background-color: lighten(#3b0038, $i * 3%);
             }
         }
     }

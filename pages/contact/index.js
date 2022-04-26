@@ -118,11 +118,11 @@ export default function Contact() {
                 </Layout>
                 <div className={styles['background--container']}>
                     <Image
-                        src="/backgrounds/ult-dark-background.svg"
+                        src="/backgrounds/new-dark-background.svg"
                         alt=""
                         layout="fill"
                         objectFit="cover"
-                        quality={1}
+                        quality={100}
                         priority
                     />
                 </div>

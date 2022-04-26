@@ -22,6 +22,10 @@ $fs-navLink: 1.6rem;
 $box-shadow-strong: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
+$box-shadow-black: 4px 0px 20px 19px rgba(0, 0, 0, 0.5);
+$box-shadow-black2: 4px 0px 20px 19px rgba(0, 0, 0, 0.4);
+$box-shadow-black3: 0px 20px 20px 19px rgba(0, 0, 0, 0.5);
+
 @mixin font-stack($font) {
     font-family: $font, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
         Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;

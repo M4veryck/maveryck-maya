@@ -8,6 +8,29 @@
     z-index: 1;
 }
 
+.socials--container {
+    position: absolute;
+    top: 50px;
+    right: 1px;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #000;
+    padding: 0.5em 0.3em 0.3em;
+    border-radius: 3px;
+}
+
+.socials-icons {
+    opacity: 0.85;
+    transition: transform 0.25s ease;
+
+    &:hover,
+    &:focus-visible {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
 .hero--container {
     display: grid;
     align-self: flex-start;
@@ -36,6 +59,9 @@
     padding: 2em;
     padding-right: 0;
     margin-top: 1em;
+    border-radius: 1px;
+    // box-shadow: $box-shadow-strong;
+    box-shadow: $box-shadow-black;
 
     color: $clr-dark;
 }
@@ -99,14 +125,15 @@
     }
 
     &::before {
-        height: 0.8em;
+        width: 6px;
+        height: 1.1em;
         position: absolute;
         content: '';
         top: 50%;
         transform: translateY(-50%);
         left: -0.75em;
 
-        border: 3px solid #ff00f2;
+        background-color: #ff00f2;
         margin-left: 1em;
     }
 }

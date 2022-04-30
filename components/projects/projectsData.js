@@ -12,11 +12,10 @@ const projectsData = [
             'Mockify (the low budget Spotify) allows you to Create, Read, Update and Delete playlists.',
         projectLongDesc:
             'Mockify is a website inspired by music apps like Spotify and Tidal. It has an authentication system and uses MongoDB as a database for both User and Playlist Schemas.',
-        bugs: `I haven't been able to find when the bug happens, but sometimes after logging in, even if the request is successful, the page will show Error 500. If this is the case, please refresh and everything should work just fine.`,
+        bugs: ``,
         techStack:
             'HTML, CSS, Sass, CSSModules, JavaScript, React, Next.js, MongoDB',
-        difficulties:
-            'Managing authentication and state between login, registration, playlists, and playlists/[id] was a big challenge. For the most part, it was because of React rules for updating a component (there were cases where only refreshing the page would update the data). Surprisingly, coding the /api folder (all backend related) was pretty straightforward.',
+        difficulties: `Managing authentication was definitely the biggest challenge. The idea is that the user can access their playlists even if they've closed the browser, but I spent a long time trying to figure out how to do this. In the end, storing the token with cookies and using getInitialProps / getServerSideProps was the solution.`,
         futureFeatures:
             'Soon, users will be able to search for songs and add them to their playlists. I will implement this feature using Spotify API.',
     },

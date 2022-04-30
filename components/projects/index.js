@@ -42,7 +42,7 @@ export default function Projects() {
                 ref={titleRef}
                 animate={titleAnimation}
             >
-                Checkout my work:
+                Check out my work:
             </motion.h2>
 
             <motion.h3
